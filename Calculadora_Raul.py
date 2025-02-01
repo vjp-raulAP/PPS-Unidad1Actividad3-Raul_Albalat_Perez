@@ -20,7 +20,7 @@ def division(a, b):
         resultado = a / b
         return resultado
 
-def isNumber(value):
+def is_Number(value):
     """Devuelve True si el valor es un número, False en caso contrario."""
     if value is None:
         return False
@@ -40,12 +40,12 @@ def main():
     
     # Solicitar los dos números al usuario
     num1 = input("Introduce el primer número: ")
-    while not isNumber(num1):
+    while not is_Number(num1):
         num1 = input("Esto no es un número. Introduce un número válido: ")
     num1 = float(num1)
 
     num2 = input("Introduce el segundo número: ")
-    while not isNumber(num2):
+    while not is_Number(num2):
         num2 = input("Esto no es un número. Introduce un número válido: ")
     num2 = float(num2)
 
