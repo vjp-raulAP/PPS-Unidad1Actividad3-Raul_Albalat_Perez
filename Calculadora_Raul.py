@@ -1,15 +1,12 @@
 
 # CALCULADORA COMPLETA
 def suma(a, b):
-    """Devuelve la suma de dos números."""
     return a + b
 
 def resta(a, b):
-    """Devuelve la resta de dos números."""
     return a - b
 
 def multiplicacion(a, b):
-    """Devuelve la multiplicación de dos números."""
     return a * b
 
 def division(a, b):
@@ -31,34 +28,35 @@ def is_Number(value):
         return False
 
 def mayorCero(value):
-    """Devuelve True si el número es mayor que cero, False en caso contrario."""
+    """Devuelve True si número es mayor que cero, False en caso contrario."""
     return value > 0
 
 def main():
+    
     """Programa principal para interactuar con el usuario."""
-    print("Bienvenido a la calculadora.")
+    print("Esto es Mi calculadora.")
     
     # Solicitar los dos números al usuario
     num1 = input("Introduce el primer número: ")
     while not is_Number(num1):
-        num1 = input("Esto no es un número. Introduce un número válido: ")
+        num1 = input("Lo siento esto no es un número. Introduce un número válido: ")
     num1 = float(num1)
 
     num2 = input("Introduce el segundo número: ")
     while not is_Number(num2):
-        num2 = input("Esto no es un número. Introduce un número válido: ")
+        num2 = input("Lo siento no es un número. Introduce un número válido: ")
     num2 = float(num2)
 
-    # Mostrar el menú de operaciones
+    #  menú de operaciones
     while True:
         print("\nSeleccione una operación:")
         print("1. Suma")
         print("2. Resta")
         print("3. Multiplicación")
         print("4. División")
-        print("5. Salir")
+        print("5. Salir de la la calculadora")
         
-        opcion = input("Introduce el número de la operación: ")
+        opcion = input("Introduce el número: ")
         
         if opcion == "1":
             print(f"Resultado: {suma(num1, num2)}")
@@ -69,7 +67,7 @@ def main():
         elif opcion == "4":
             print(f"Resultado: {division(num1, num2)}")
         elif opcion == "5":
-            print("Saliendo del programa. ¡Adiós!")
+            print("Saliendo del programa.")
             break
         else:
             print("Opción no válida. Por favor, elige una opción entre 1 y 5.")
