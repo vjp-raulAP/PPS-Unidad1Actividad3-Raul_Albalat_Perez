@@ -47,13 +47,20 @@ def multiplicacion(a, b):
 ```
 
 ### **Descripción del flujo de control**  
-1. **Inicio (Nodo 1):** La función realiza la operación `a * b` y retorna el resultado sin ninguna bifurcación.  
+- **A[Inicio]**: Este es el punto de inicio de la función.
+- **B[Realizar multiplicación a * b]**: En este paso, la función realiza la multiplicación entre los dos parámetros `a` y `b`.
+- **C[Imprimir el resultado]**: Después de la multiplicación, el resultado se imprime en la salida.
+- **D[Fin de la operación]**: Finalmente, la operación termina.
 
 ### **Diagrama del Grafo de Flujo**  
 ```
-    (1) [Inicio]
-        |
-      a * b
+    (A) [Inicio]
+         |
+   (B) a * b
+         |
+   (C) impr result
+         |
+   (D) Fin de operacion       
 ```
 ![](imagenes/diagrama_grafo_multiplicacion.png)
 
