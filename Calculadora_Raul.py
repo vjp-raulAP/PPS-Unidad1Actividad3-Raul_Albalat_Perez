@@ -1,7 +1,7 @@
-
-# CALCULADORA COMPLETA
+#CALCULADORA COMPLETA
 def suma(a, b):
     return a + b
+
 
 def resta(a, b):
     return a - b
@@ -10,68 +10,73 @@ def multiplicacion(a, b):
     return a * b
 
 def division(a, b):
-    if not mayorCero(b):
-        print ("El divisor debe de ser mayor que cero")
-        return False
-    else: 
-        resultado = a / b
-        return resultado
+    #Division de dos números, con control de división por cero.
+    
+    if b == 0:
+        return "Error: No se puede dividir por cero."
+    return a / b
 
-def is_Number(value):
-    """Devuelve True si el valor es un número, False en caso contrario."""
-    if value is None:
-        return False
+def mayorCero(a):
+    #indica si el número pasado es mayor que cero.
+
+    return a > 0
+
+def is_number(valor):
+    #indica si el argumento introducido es un número o no.
+
     try:
-        float(value)
+        float(valor)
         return True
     except ValueError:
         return False
-
-def mayorCero(value):
-    """Devuelve True si número es mayor que cero, False en caso contrario."""
-    return value > 0
-
-def main():
     
-    """Programa principal para interactuar con el usuario."""
-    print("Esto es Mi calculadora.")
-    
-    # Solicitar los dos números al usuario
-    num1 = input("Introduce el primer número: ")
-    while not is_Number(num1):
-        num1 = input("Lo siento esto no es un número. Introduce un número válido: ")
-    num1 = float(num1)
+def pedir_numero(mensaje, validar_mayor_cero=False):
+    #solicita un numero al usuario y valida la entrada.
+    while True:
+        valor = input(mensaje)
 
-    num2 = input("Introduce el segundo número: ")
-    while not is_Number(num2):
-        num2 = input("Lo siento no es un número. Introduce un número válido: ")
-    num2 = float(num2)
+        if is_number(valor):
+            num = float(valor)
+            if validar_mayor_cero and not mayorCero(num):
+                print("Error: El número debe ser mayor que cero.")
+            else:
+                return num
+        else:
+            print("Error: Debe ingresar un numero que sea valido.")
 
-    #  menú de operaciones
+def calculadora():
+    operaciones = {
+        '1': ("Suma", suma),
+        '2': ("Resta", resta),
+        '3': ("Multiplicación", multiplicacion),
+        '4': ("División", division),
+        '5': ("Salir", None)
+    }
     while True:
         print("\nSeleccione una operación:")
-        print("1. Suma")
-        print("2. Resta")
-        print("3. Multiplicación")
-        print("4. División")
-        print("5. Salir de la la calculadora")
-        
-        opcion = input("Introduce el número: ")
-        
-        if opcion == "1":
-            print(f"Resultado: {suma(num1, num2)}")
-        elif opcion == "2":
-            print(f"Resultado: {resta(num1, num2)}")
-        elif opcion == "3":
-            print(f"Resultado: {multiplicacion(num1, num2)}")
-        elif opcion == "4":
-            print(f"Resultado: {division(num1, num2)}")
-        elif opcion == "5":
-            print("Saliendo del programa.")
-            break
-        else:
-            print("Opción no válida. Por favor, elige una opción entre 1 y 5.")
+        for clave, (nombre, _) in operaciones.items():
+            print(f"{clave}. {nombre}")
 
-# Llamada al programa principal
-if __name__ == "__main__":
-    main()
+        operacion = input("ingrese el número de la operación (1/2/3/4/5): ")
+
+        if operacion == '5':  #Opción para salir
+            print("Saliendo de la calculadora... ")
+            print(" Que tenga un buen día ")
+            break
+
+        if operacion in operaciones and operacion != '5':
+            num1 = pedir_numero("ingrese el primer numero: ")
+
+                # Si la operación es división, validar que num2 > 0
+            if operacion == '4':
+                num2 = pedir_numero("ingrese el segundo numero (debe ser mayor que 0): ", validar_mayor_cero=True)
+            else:
+                num2 = pedir_numero("ingrese el segundo numero: ")
+
+            resultado = operaciones[operacion][1](num1, num2)
+            print(f"Resultado: {resultado}")      
+        else:
+            print("operación no valida.")
+
+if __name__=="__main__":
+    calculadora()
