@@ -8,9 +8,9 @@ En esta práctica, analizamos los grafos de flujo correspondientes a las funcion
 ### **Código de la función**  
 ```python
 def division(a, b):
-    if b == 0:  # Nodo 1
-        return "Error: División por cero"  # Nodo 2
-    return a / b  # Nodo 3
+    if b == 0:  # Nodo B
+        return "Error: División por cero"  # Nodo C
+    return a / b  # Nodo D y E
 ```
 
 ### **Descripción del flujo de control**  
@@ -43,7 +43,7 @@ Error:     (E)impr result
 ### **Código de la función**  
 ```python
 def multiplicacion(a, b):
-    return a * b  # Nodo único
+    return a * b  # Nodo B y C
 ```
 
 ### **Descripción del flujo de control**  
@@ -64,3 +64,6 @@ def multiplicacion(a, b):
 ```
 ![](imagenes/diagrama_grafo_multiplicacion.png)
 
+---
+
+#  Estrategias de Pruebas
