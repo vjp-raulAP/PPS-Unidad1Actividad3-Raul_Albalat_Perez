@@ -14,19 +14,26 @@ def division(a, b):
 ```
 
 ### **Descripción del flujo de control**  
-1. **Inicio (Nodo 1):** Se evalúa la condición `b == 0`.  
-2. **Camino Verdadero:** Si `b == 0`, la función retorna un mensaje de error (**Nodo 2**).  
-3. **Camino Falso:** Si `b != 0`, se realiza la operación de división y se retorna el resultado (**Nodo 3**).  
+- **A[Inicio]**: Es el punto de inicio del proceso.
+- **B{¿b == 0?}**: Se pregunta si `b` es igual a cero.
+- **C[Error: No dividir entre cero]**: Si la respuesta es "Sí", se muestra el mensaje de error.
+- **D[Realizar la división a / b]**: Si la respuesta es "No", se realiza la división.
+- **E[Imprimir el resultado]**: Luego, se imprime el resultado de la división.
+- **F[Fin de la operación]**: Finalmente, se termina la operación.
 
 ### **Diagrama del Grafo de Flujo**  
 ```
-    (1) [Inicio]
+    (A) [Inicio]
         |
-      b == 0 ?
+    (B) b == 0 ?
       /     \
     Sí       No
-   (2)       (3)
- "Error"    a / b
+   (C)       (D)
+    |       a / b
+    |         |
+Error:     (E)impr result 
+     \        / 
+   (F)fin de operacion
 ```
 
 ![](imagenes/diagrama_grafo_division.png)
@@ -48,3 +55,5 @@ def multiplicacion(a, b):
         |
       a * b
 ```
+![](imagenes/diagrama_grafo_multiplicacion.png)
+
