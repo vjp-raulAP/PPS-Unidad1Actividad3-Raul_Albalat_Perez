@@ -22,12 +22,16 @@ def mayorCero(a):
     return a > 0
 
 def is_number(valor):
-    #indica si el argumento introducido es un número o no.
-
+    """Indica si el argumento introducido es un número o no."""
+    if valor is None:  # Si el valor es None, no es un número
+        return False
+    
     try:
-        float(valor)
+        float(valor)  # Intentamos convertir a float
         return True
     except ValueError:
+        return False
+    except TypeError:  # Capturamos el caso de un tipo incorrecto
         return False
     
 def pedir_numero(mensaje, validar_mayor_cero=False):
