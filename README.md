@@ -68,4 +68,4 @@ def multiplicacion(a, b):
 
 #  Estrategias de Pruebas
 
-
+[## Test de clases de equivalencia y valores límites para la función](Test_calculadoraRaul.ipynb)
