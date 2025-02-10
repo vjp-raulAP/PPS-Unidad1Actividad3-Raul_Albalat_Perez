@@ -69,3 +69,7 @@ def multiplicacion(a, b):
 #  Estrategias de Pruebas
 
 [## Test de clases de equivalencia y valores límites para la función](Test_calculadoraRaul.ipynb)
+
+
+
+[# Test de Clases de equivalencia y valores limites para division.](Test_calculadoraRaul.ipynb)
