@@ -26,7 +26,7 @@ En [este otro](Pruebas.ipynb) tienes un _Jupyter Notebook_ donde puedes ver un e
 ---
 ## ENTREGA
 
-# En [este enlace](Test_calculadoraRaul.ipynb) puedes encontrar tanto los test de clases de equivalencia como los grafos corresponcientes a lo que se pide. 
+# En [este enlace](Test_calculadoraRaul.ipynb) puedes encontrar tanto los test de clases de equivalencia como los grafos correspondientes a lo que se pide. 
 
 >__Envía en un archivo comprimido:__
 > - el __código__ de tu aplicación de calculadora.
