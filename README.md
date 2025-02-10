@@ -1,75 +1,35 @@
 # PPS-Unidad1Actividad3-Raul_Albalat_Perez
-# **Análisis de Grafos de Flujo y Estrategias de Pruebas**  
 
-En esta práctica, analizamos los grafos de flujo correspondientes a las funciones `division` y `multiplicacion`, identificando los caminos posibles en su ejecución. Además, evaluamos estrategias de prueba basadas en caja blanca y caja negra.  
+Actividad 3 de la Unidad 1 de Puesta en Producción Segura. Tabajaremos con pruebas en Python.
 
-## **1. Grafo de Flujo para la Función `division`**  
+Tenemos varios objetivos:
 
-### **Código de la función**  
-```python
-def division(a, b):
-    if b == 0:  # Nodo B
-        return "Error: División por cero"  # Nodo C
-    return a / b  # Nodo D y E
-```
+> [Conocer las diferentes pruebas software](#Pruebas)
 
-### **Descripción del flujo de control**  
-- **A[Inicio]**: Es el punto de inicio del proceso.
-- **B{¿b == 0?}**: Se pregunta si `b` es igual a cero.
-- **C[Error: No dividir entre cero]**: Si la respuesta es "Sí", se muestra el mensaje de error.
-- **D[Realizar la división a / b]**: Si la respuesta es "No", se realiza la división.
-- **E[Imprimir el resultado]**: Luego, se imprime el resultado de la división.
-- **F[Fin de la operación]**: Finalmente, se termina la operación.
-
-### **Diagrama del Grafo de Flujo**  
-```
-    (A) [Inicio]
-        |
-    (B) b == 0 ?
-      /     \
-    Sí       No
-   (C)       (D)
-    |       a / b
-    |         |
-Error:     (E)impr result 
-     \        / 
-   (F)fin de operacion
-```
-
-![](imagenes/diagrama_grafo_division.png)
-
-## **2. Grafo de Flujo para la Función `multiplicacion`**  
-
-### **Código de la función**  
-```python
-def multiplicacion(a, b):
-    return a * b  # Nodo B y C
-```
-
-### **Descripción del flujo de control**  
-- **A[Inicio]**: Este es el punto de inicio de la función.
-- **B[Realizar multiplicación a * b]**: En este paso, la función realiza la multiplicación entre los dos parámetros `a` y `b`.
-- **C[Imprimir el resultado]**: Después de la multiplicación, el resultado se imprime en la salida.
-- **D[Fin de la operación]**: Finalmente, la operación termina.
-
-### **Diagrama del Grafo de Flujo**  
-```
-    (A) [Inicio]
-         |
-   (B) a * b
-         |
-   (C) impr result
-         |
-   (D) Fin de operacion       
-```
-![](imagenes/diagrama_grafo_multiplicacion.png)
+> [Realizar pruebas para las funciones de una calculadora en Python](#Pruebas-en-Python)
 
 ---
+## Pruebas
 
-#  Estrategias de Pruebas
+En [este enlace](PresentacionPruebas.pdf) puedes encontrar la presentación de los contenidos teóricos de la unidad correspondientes a las pruebas software.
 
-[## Test de clases de equivalencia y valores límites para la función](Test_calculadoraRaul.ipynb)
+En [este otro](Pruebas.ipynb) tienes un _Jupyter Notebook_ donde puedes ver un ejemplo de las pruebas de caja negra y blanca, similar a lo que tienes que hacer.
 
+## Pruebas en Python
 
+> Sobre la implementación de la aplicación de la calculadora en Python de la actividad anterior:
+> - Comprueba las clases de equivalencia de las funciones isNumber y división
+> - Halla en grafo de flujo asociado a las funciones division y multiplicación.
+> - Genera los pruebas unitarias con UnitTest o PyTest correspondientes a las funciones:
+> - - isNumber, division. Caja Negra y Caja Blanca para ambas.
+> - - multiplicacion. Caja Blanca.
+---
+## ENTREGA
 
-[ Test de Clases de equivalencia y valores limites para division.](Test_calculadoraRaul.ipynb#Test de Clases de equivalencia y valores limites para division)
+# En [este enlace](Test_calculadoraRaul.ipynb) puedes encontrar tanto los test de clases de equivalencia como los grafos corresponcientes a lo que se pide. 
+
+>__Envía en un archivo comprimido:__
+> - el __código__ de tu aplicación de calculadora.
+> - los __archivos Python con tus pruebas.__ 
+> - Documento donde se vean las __clases de equivalencia y los grafos de flujo__ asociados.
+
