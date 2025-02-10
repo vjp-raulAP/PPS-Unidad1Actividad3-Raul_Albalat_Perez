@@ -72,4 +72,4 @@ def multiplicacion(a, b):
 
 
 
-[# Test de Clases de equivalencia y valores limites para division.](Test_calculadoraRaul.ipynb)
+[ Test de Clases de equivalencia y valores limites para division.](Test_calculadoraRaul.ipynb#Test de Clases de equivalencia y valores limites para division)
